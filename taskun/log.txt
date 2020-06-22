@@ -1,0 +1,2 @@
+java.lang.ClassCastException: class java.io.PrintWriter cannot be cast to class java.util.function.Supplier (java.io.PrintWriter and java.util.function.Supplier are in module java.base of loader 'bootstrap')
+	at oshiLogs.Logs.main(Logs.java:63)

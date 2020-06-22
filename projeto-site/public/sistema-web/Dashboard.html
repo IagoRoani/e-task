@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.dslreports.com/assets/st/1.6/js/speedtest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <link rel="icon" type="image/jpg" href="img/e-task-logo.png" />
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <!-- <di class="checkbox">
+            <input type="checkbox" id="switch" /><label for="switch"></label>
+        </di> -->
+
+        <ul>
+            <a href="#" class="active">
+                <div class="active_div">
+                    <img class="material-icons" src="img/multiline_chart-white-24dp.svg"><span
+                        class="text-menu">Dashboard</span>
+                </div>
+            </a>
+
+            <a href="Relatorios.html">
+                <div>
+                    <img class="material-icons" src="img/history-white-24dp.svg"><span
+                        class="text-menu">Relatórios</span>
+                </div>
+            </a>
+
+            <a href="Newsletter.html">
+                <div>
+                    <img class="material-icons" src="img/turned_in-white-24dp.svg"><span
+                        class="text-menu">Newsletter</span>
+                </div>
+            </a>
+
+            <a href="Usuario.html">
+                <div>
+                    <img class="material-icons" src="img/person-white-24dp.svg"><span class="text-menu">Usuário</span>
+                </div>
+            </a>
+
+            <a onclick='Sair()' id="sair" href="#">
+                <div>
+                    <img class="material-icons" src="img/sign_out-white-24dp.svg"><span class="text-menu">Sair</span>
+                </div>
+            </a>
+        </ul>
+        <div class='desfocado' id='desfocado'>
+            <div class='sair_prg' id='sair_prg'>
+                <span onclick="Cancela()">X</span><br>
+                <img class="img_sair" src="img/gnar.png" alt="">
+                <p>Tem certeza que deseja sair do sistema?</p><button class='cancelar button_op'
+                    onclick='Cancela()'>Não</button><button><a class='sim button_op''>Sim</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="conteudo">
+        <section class="graficos_doughnut">
+            <p class="titulo">Componentes</p>
+            <div class="divGrafCPU div tudo_junto">
+                <div class="div_div">
+                    <canvas id="chartCPU"></canvas>
+                </div>
+                <article class="div_componete_conteudo">
+                    <h3 id="modeloCPU"></h3>
+                    <b>Velocidade base: </b>
+                    <span id="data_Registro"> Velocidade</span><br>
+                        <b>Threands: </b><span id="threandsCPU"> Threands</span><br>
+                        <b>Processos: </b> <span id="processosCPU"> Processos</span>
+                </article>
+            </div>
+            <div class="divGrafRAM div tudo_junto">
+                <div class="div_div">
+                    <canvas id="chartRAM"></canvas>
+                </div>
+                <article class="div_componete_conteudo">
+                    <h3>Memória instalada: <span id="memoriaRAM"></span></h3>
+                    <b>Tipo: </b>
+                    <span id="tipoRAM"></span><br>
+                        <b>Velocidade: </b><span id="velocidadeRAM"></span><br>
+                        <b>Utilizável: </b> <span id="utilizavelRAM"></span>
+                        <b> Disponível: </b> <span id="disponivelRAM"></span>
+                </article>
+            </div>
+            <div class="divGrafGPU div tudo_junto">
+                <div class="div_div tudo_junto">
+                    <canvas id="chartGPU" width="20"></canvas>
+                </div>
+                <article class="div_componete_conteudo">
+                    <h3 id="modeloGPU"></h3>
+                    <b>Vesão: </b><span id="versaoGPU"></span><br>
+                    <b>Memoria: </b> <span id="memoriaGPU"></span>
+                </article>
+            </div>
+            <div class="divGrafHD div tudo_junto">
+                <div class="div_div">
+                    <canvas id="chartHD" style="display: flex;"></canvas>
+                </div>
+                <article class="div_componete_conteudo">
+                    <h3 id="modeloHD"></h3>
+                    <b  id="discoHD"></b>
+                    <b> Tipo: </b>
+                    <span  id="tipoHD"></span><br>
+                        <b>Utilizável: </b> <span id="utilizavelHD"></span>
+                        <b>Disponível: </b> <span id="disponivelHD"></span><br>
+                        <b>Tempo de atividade: </b><span id="tempoHD"></span>
+                </article>
+            </div>
+        </section>
+
+        <section class="graficos_network">
+        <p class="titulo">Network</p>
+            <div class="network tudo_junto">
+                <div class='download div_div'>
+                    <p><span>DOWNLOAD </span> Mbps</p>
+                    <div>
+                        <canvas id="charDownload"></canvas>
+                    </div>
+                </div>
+                <div class='ping div_div'>
+                    <p><span>PING </span> ms</p>
+                    <div>
+                        <canvas id="chartPing"></canvas>
+                    </div>
+                </div>
+                <div class='upload div_div'>
+                    <p><span>UPLOAD</span> Mbps</p>
+                    <div>
+                        <canvas id="chartUpload"></canvas>
+                    </div>
+                </div>
+            </div>
+        <d class="processando_ tudo_junto" id="processando"></d>
+        </section>
+
+        <section class="grafico_line">
+            <p id="grafico_line_titulo" class="grafico_line_titulo">Tempo de atividade dos componentes</p>
+            <div class="line_legenda tudo_junto">
+                <span>
+                    <div class="legenda_cpu"> </div>CPU
+                </span>
+                <span>
+                    <div class="legenda_ram"></div>RAM
+                </span>
+                <span>
+                    <div class="legenda_gpu"></div>GPU
+                </span>
+                <span>
+                    <div class="legenda_hd"></div>HD
+                </span>
+            </div>
+            <div class="chart_line tudo_junto">
+                <canvas id="chartLine"></canvas>
+            </div>
+            <b class="legenda_hora tudo_junto"> HH : mm </b>
+        </section>
+        <section class="descricao_pc">
+            <div class="tempo_atividade tudo_junto">
+                <p class="tempo_title">Tempo de atividade</p>
+                <p class="time" id="tempoAtivo">0:00:00:00</p>
+            </div>
+            <div class="descricao tudo_junto">
+                <b>Sistema Operacional: </b> <span id="sistemaOperacional"> Microsoft Windows 10</span>
+                <b> Tipo de sistema: </b> <span id="tipoOS"> 64 bit</span><br>
+                <b>Nome computador: </b> <span id="nomeMaquina"> DESKTOP-A4H4K35 </span>
+            </div>
+        </section>
+        </div>
+</body>
+
+</html>
+<script src="js/chartDashboard.js"></script>
+<script src="js/sair.js"></script>
+<script src="js/ChartDoughnut.js"></script>
+<script src="js/ChartDonutNetwork.js"></script>
+<script src="js/ChartLine.js"></script>
+<script src="js/network.js"></script>
+<script src="js/maquina.js"></script>

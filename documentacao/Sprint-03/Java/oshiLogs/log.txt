@@ -1,0 +1,5 @@
+Operacao recuperada com sucesso Thu May 28 20:58:11 BRT 2020
+Error ao recuperar informacoes : Thu May 28 20:58:11 BRT 2020
+
+java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: <any>
+	at com.mycompany.oshilogs.GeradorLogs.main(GeradorLogs.java:40)

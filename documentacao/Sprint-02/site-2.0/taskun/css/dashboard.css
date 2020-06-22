@@ -1,0 +1,213 @@
+.graficos_doughnut, .grafico_line {
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Componetes */
+
+.graficos_doughnut {
+    margin-right: 0.8%;
+    padding: 0 2%;
+    float: left;
+    background-color: #242424;
+    border-radius: 5px;
+    height: 93vh;
+}
+
+.graficos_doughnut .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5vh;
+    margin-top: 3%;
+    color: rgb(235, 235, 235);
+}
+
+.graficos_doughnut .div {
+    display: flex;
+    /* margin: 0% 5px 0 10px; */
+    width: 28vw;
+}
+
+.graficos_doughnut .div .div_div {
+    width: 12vw;
+    height: 18vh;
+    margin: 2.1vh 0;
+}
+
+.divGrafRAM, .divGrafHD, .divGrafGPU {
+    border-top: 1px solid rgba(59, 59, 59, 1);
+}
+
+.div_componete_conteudo {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 4.5vh;
+    padding-left: 5px;
+    line-height: 1.7;
+    text-align: justify;
+    color: rgb(235, 235, 235);
+}
+
+.div_componete_conteudo h3 {
+    font-size: 12px;
+}
+
+.div_componete_conteudo span, .div_componete_conteudo b {
+    font-size: 11px;
+    color: rgb(204, 204, 204);
+    line-height: 2;
+}
+
+/* NetWork */
+
+.graficos_network {
+    float: left;
+    width: 50.5vw;
+    height: 27vh;
+    background-color: #242424;
+    border-radius: 5px;
+}
+
+.graficos_network .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: rgb(235, 235, 235);
+}
+
+.graficos_network .network {
+    display: flex;
+    justify-content: center;
+}
+
+.graficos_network .network .ping {
+    width: 15.5vw;
+    /* height: 10vh; */
+    margin: 0% 4%;
+}
+
+.graficos_network .network .download, .graficos_network .network .upload {
+    width: 13.5vw;
+    /* height: 10vh; */
+}
+
+.graficos_network .network div p {
+    font-size: 1.5vh;
+    margin: 3px;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(235, 235, 235);
+}
+
+.graficos_network .network div p span {
+    font-weight: bold;
+}
+
+/* Line */
+
+.grafico_line {
+    width: 50.5vw;
+    height: 42.5vh;
+    text-align: center;
+    float: left;
+    /* align-items: center; */
+    margin-top: 0.8%;
+    /* padding: 1% 0% 2% 0%; */
+    background-color: #242424;
+    border-radius: 5px;
+}
+
+.grafico_line .chart_line {
+    display: flex;
+    width: 49vw;
+    height: 30vh;
+    padding: 1%;
+}
+
+.grafico_line .grafico_line_titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(235, 235, 235);
+    font-size: 1.3vw;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.line_legenda {
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    color: rgb(235, 235, 235);
+    font-size: 0.8vw;
+    /* width: 49vw; */
+    padding: 0 10%;
+}
+
+.line_legenda span {
+    display: flex;
+    margin: 0.5% 2%;
+}
+
+.line_legenda span div {
+    width: 0.6vw;
+    height: 1.2vh;
+    border: solid 1px rgb(235, 235, 235);
+    border-radius: 2px;
+    margin: 0px 5px;
+}
+
+.legenda_cpu {
+    background-color: rgba(87, 199, 186, 0.94);
+}
+
+.legenda_ram {
+    background-color: rgba(252, 201, 34, 0.94);
+}
+
+.legenda_gpu {
+    background-color: rgba(199, 84, 201, 0.94);
+}
+
+.legenda_hd {
+    background-color: rgba(107, 209, 77, 0.94);
+}
+
+.descricao_pc {
+    text-align: justify;
+    width: 50.5vw;
+    height: 20.7vh;
+    float: left;
+    margin-top: 0.8%;
+    background-color: #242424;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(201, 201, 201, 1);
+    font-size: 1vw;
+}
+
+.descricao_pc div {
+    padding: 0 2%;
+}
+
+.descricao p {
+    margin: 0vh 1vh 0.7vh 0vh;
+}
+
+.descricao p span {
+    color: rgb(241, 241, 241);
+}
+
+.tempo_atividade {
+    text-align: center;
+}
+
+.tempo_title {
+    margin: 1.7vh 0px 0vh 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+.tempo_atividade .time {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5vw;
+    color: rgb(241, 241, 241);
+}

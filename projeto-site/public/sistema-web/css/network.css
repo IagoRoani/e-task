@@ -1,0 +1,55 @@
+.graficos_network {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.graficos_network div {
+    margin: 0 2%;
+}
+
+.graficos_network .ping {
+    width: 17vw;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.graficos_network .download {
+    width: 20vw;
+}
+
+.graficos_network .upload {
+    width: 17vw;
+}
+
+.graficos_network div p {
+    margin: 5px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(240, 240, 240, 0.87);
+}
+.graficos_network div p  span{
+    font-weight:normal;
+
+}
+
+.zero {
+    color: rgba(240, 240, 240, 0.87);
+    float: left;
+    margin-left: 7%;
+    margin-top: -1%;
+    font-family: Sans-Serif;
+    font-weight: bold;
+}
+
+.cem {
+    color: rgba(240, 240, 240, 0.87);
+    float: right;
+    margin-right: 4.5%;
+    margin-top: -1%;
+    font-family: Sans-Serif;
+    font-weight: bold;
+}
