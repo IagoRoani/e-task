@@ -1,9 +1,0 @@
-{
-    "name": "e-task-raiz",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node ./projeto-site/bin/www",
-        "postinstall": "cd projeto-site && npm install"
-    }
-}
