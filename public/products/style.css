@@ -1,360 +1,361 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-  }
-  
-  :root {
-    --secondary-color: #151226;
-    --contrast-color:#EC7505;
-  }
-  #container {
-    display: flex;
-    height: 100vh;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
-    animation: expand .8s ease forwards;
-    background-color: var(--secondary-color);
-    position: relative;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: all .8s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+:root {
+  --secondary-color: #151226;
+  --contrast-color:#EC7505;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all .8s ease;
 }
 
 nav {
-    float: left;
-      position: relative;
-      top: 0;
-    left: 0;
-      background: transparent;
-    }
-    
-    nav ul {
-      text-align: center;
-    }
-    
-    nav ul li {
-      position: relative;
-    width: 70px;
-    cursor: pointer;
-      background:black;
-      text-transform: uppercase;
-      transition:all .2s ease-out;
-    }
-    
-    nav ul li:after {
-      position: absolute;
-      background: black;
-      color: wheat;
-      top:0;
-      left: 70px;
-      width: 70px; height: 100%;
-    opacity:.5;
-    transform: perspective(400px) rotateY(90deg);
-      transform-origin: 0 100%;
-      transition:all .3s ease-out;
-    }
-    
-    nav ul li > div {
-      display: inline-block;
-      padding: 25px 0;
-      background: transparent;
-    }
-    
-    nav ul li div { position: relative; }
-    
-    a{
-      text-decoration: none;
-      color: var(--contrast-color);
-      font-size: 30px;
-    }
+  float: left;
+    position: relative;
+    top: 0;
+  left: 0;
+    background: transparent;
+  }
+  
+  nav ul {
+    text-align: center;
+  }
+  
+  nav ul li {
+    position: relative;
+  width: 70px;
+  cursor: pointer;
+    background:black;
+    text-transform: uppercase;
+    transition:all .2s ease-out;
+  }
+  
+  nav ul li:after {
+    position: absolute;
+    background: black;
+    color: wheat;
+    top:0;
+    left: 70px;
+    width: 70px; height: 100%;
+  opacity:.5;
+  transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition:all .3s ease-out;
+  }
+  
+  nav ul li > div {
+    display: inline-block;
+    padding: 25px 0;
+    background: transparent;
+  }
+  
+  nav ul li div { position: relative; }
+  
+  a{
+    text-decoration: none;
+    color: var(--contrast-color);
+    font-size: 30px;
+  }
 
-    .pad-vertical {
-        padding: 75px 0;
-    }
-    .ms-container {
-        padding: 50px 0;
-    }
+  .pad-vertical {
+      padding: 75px 0;
+  }
+  .ms-container {
+      padding: 50px 0;
+  }
 
 
 h2 {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
 h2:before,
 h2:after {
-    content: '';
-    border-top: 1px solid;
-    margin: 0 20px 0 0;
-    flex: 1 0 20px;
+  content: '';
+  border-top: 1px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
 }
 
 h2:after {
-    margin: 0 0 0 20px;
+  margin: 0 0 0 20px;
 }
 
 .tr { 
-    width: 100%;
-    margin-right: 180px;
-    border: 1px solid;
-    height: 650px;
+  width: 100%;
+  margin-right: 180px;
+  border: 1px solid;
+  height: 650px;
 
- } 
+} 
 .tr:before { 
-    content: ''; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 } 
 
 .tr2 { 
-    width: 30%;
-    margin-left: 880px;
-    position: relative;
-    border: 1px solid;
-    height: 280px;
-    margin-top: -200px;
-    background-color: #151226;
+  width: 30%;
+  margin-left: 880px;
+  position: relative;
+  border: 1px solid;
+  height: 280px;
+  margin-top: -200px;
+  background-color: #151226;
 
- } 
+} 
 .tr2:before { 
-    content: ''; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 } 
 
 .tr3{
-  background-image: url(../Assets/qurkii.png);
-  width: 180px;
-  height: 180px;
-  margin-top: -140px;
-  border-radius: 80%;
-  margin-left: -95px;
-  background-repeat: no-repeat;
+background-image: url(../Assets/qurkii.png);
+width: 180px;
+height: 180px;
+margin-top: -140px;
+border-radius: 80%;
+margin-left: -95px;
+background-repeat: no-repeat;
 
 }
 
 .tr3:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .tralert{
-  border-radius: 2%;
-  background-color: #EC7505;
-  height: 300px;
-  width: 75%;
-  margin-left: 25px;
+border-radius: 2%;
+background-color: #EC7505;
+height: 300px;
+width: 75%;
+margin-left: 25px;
 
 }
 
 .tralert:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 
 
 .img{
-  width: 120px;
-  margin-left: 30%;
-  border-radius: 50%;
+width: 120px;
+margin-left: 30%;
+border-radius: 50%;
 }
 
 p{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 12px;
-  text-align: justify;
-  margin: 10px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 12px;
+text-align: justify;
+margin: 10px;
 }
 
 .txtalert{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
-  text-align: justify;
-  margin-right: 50px;
-  width: 70%;  
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 20px;
+text-align: justify;
+margin-right: 50px;
+width: 70%;  
 }
 
 .txtalert:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .boxalert{
-  width: 22%;
-  height: 95%;
-  background-color: #151226;
-  border-radius: 5%;
-  margin-left: 640px;
-  margin-top: -100px;
+width: 22%;
+height: 95%;
+background-color: #151226;
+border-radius: 5%;
+margin-left: 640px;
+margin-top: -100px;
 }
 .boxlert:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .textbox{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 25px;
-  text-align: center;
-  margin-top: 50px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 25px;
+text-align: center;
+margin-top: 50px;
 }
 
 .textbox:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .imgbox{
-  margin-left: 60px;
-  margin-top: 20px;
+margin-left: 60px;
+margin-top: 20px;
 }
 
 .imgbox:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 
 .imgbox2{
-  margin-left: 65px;
-  margin-top: 20px;
-  width: 50px;
+margin-left: 65px;
+margin-top: 20px;
+width: 50px;
 }
 
 .imgbox2:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 .txttop{
-  width: 50%;
-  height: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 18px;
-  margin-left: 15%;
-  margin-top: 5px;
+width: 50%;
+height: 30px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 18px;
+margin-left: 15%;
+margin-top: 5px;
 }
 
 .txttop:before { 
-  content: ''; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+content: ''; 
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 
 h3 {
-  border-width: thin;
-  border-style: solid;
-  border-color: #EC7505;
-  border-radius: 50%;
-  width: 160px;
-  margin-left: 80%;
-  height: 160px;
-  }
+border-width: thin;
+border-style: solid;
+border-color: #EC7505;
+border-radius: 50%;
+width: 160px;
+margin-left: 80%;
+height: 160px;
+}
 
-  .imgDiscord{
-    width: 80px;
-    margin-top: 20px;
-    margin-left: 40px;
-  }
+.imgDiscord{
+  width: 80px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
 
-  .txtdiscord{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    margin: 10px;
-    margin-left: 45px;
-  }
+.txtdiscord{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  margin: 10px;
+  margin-left: 45px;
+}
 
 
 
 h2 span {
-  animation: textChangeColor 7s linear infinite;
+animation: textChangeColor 7s linear infinite;
 }
 
 @keyframes textChangeColor {
-  0% {
-    color:#EC7505;
-  }
-  40% {
-    color: #0f79f1;
-  }
-  100% {
-    color: #EC7505;
-  }
+0% {
+  color:#EC7505;
+}
+40% {
+  color: #0f79f1;
+}
+100% {
+  color: #EC7505;
+}
 }
 
 .text{
- margin: -28px;
- width: 20%;
- margin-left: 120px;
- background-color: #151226;
+margin: -28px;
+width: 20%;
+margin-left: 120px;
+background-color: #151226;
 }
 
 
 @media only screen and (max-width: 959px) {
-  h2 span{
-      font-size: 10px;
-  }
+h2 span{
+    font-size: 10px;
+}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  h2 span{
-      font-size: 12px;
-  }
+h2 span{
+    font-size: 12px;
+}
 }
 
 @media only screen and (max-width: 767px) {
-  h2 span {
-      font-size: 14px;
-  }
+h2 span {
+    font-size: 14px;
+}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  h2 span {
-      font-size: 9px;
-  }
+h2 span {
+    font-size: 9px;
+}
 }
 
 
@@ -362,921 +363,921 @@ h2 span {
 
 
 @media only screen and (max-width: 479px) {
- .txttop {
-      font-size: 12px;
-      width: 100%;
-      height: 100%;
-  }
+.txttop {
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+}
 }
 
 @media only screen and (max-width: 959px) {
-  .txttop {
-      font-size: 10px;
-      width: 100%;
-      height: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .txttop {
-      font-size: 12px;
-      width: 100%;
-      height: 100%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .txttop {
-      font-size: 14px;
-      width: 100%;
-      height: 100%;
-  }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .txttop {
-    position: absolute;
-      font-size: 10px;
-      width: 50%;
-      height: 100%;
-      bottom: -80px;
-  }
-}
-
-
-
-@media only screen and (max-width: 479px) {
-  .text {
-       font-size: 12px;
-       width: 100%;
-       height: 100%;
-       font-size: 35px;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .text{
-       font-size: 10px;
-       width: 100%;
-       height: 100%;
-       font-size: 35px;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .text {
-       font-size: 12px;
-       width: 100%;
-       height: 100%;
-       font-size: 35px;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .text {
-       font-size: 14px;
-       width: 100%;
-       height: 100%;
-       font-size: 35px;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .text {
-     position: absolute;
-       width: 80%;
-       height: 100%;
-       top: 15.8%;
-       left: 11%;
-   }
- }
-
-
-
- @media only screen and (max-width: 479px) {
-  .tr3 {
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    border-radius: 50%;
-    top: 15%;
-    left: 9%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .tr3{
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    border-radius: 50%;
-    top: 15%;
-    left: 9%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .tr3 {
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    border-radius: 50%;
-    top: 15%;
-    left: 9%;
-       
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .tr3 {
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    border-radius: 50%;
-    top: 15%;
-    left: 9%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .tr3 {
-       width: 90px;
-       height: 90px;
-       position: absolute;
-       border-radius: 50%;
-       top: 15%;
-       left: 9%;
-   }
- }
-
-
-
- @media only screen and (max-width: 479px) {
-  .tralert {
-    width: 58%;
-    height: 20%;
-    position: absolute;
-    bottom: 2%;
-    left: -3%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .tralert{
-    width: 58%;
-    height: 20%;
-    position: absolute;
-    bottom: 2%;
-    left: -3%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .tralert {
-    width: 58%;
-    height: 20%;
-    position: absolute;
-    bottom: 2%;
-    left: -3%;
-       
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .tralert {
-    width: 58%;
-    height: 20%;
-    position: absolute;
-    bottom: 2%;
-    left: -3%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .tralert {
-       width: 58%;
-       height: 20%;
-       position: absolute;
-       bottom: 2%;
-       left: -3%;
-   }
- }
-
-
- @media only screen and (max-width: 479px) {
-  .txtalert {
-       width: 50%;
-       height: 100%;
-       position: absolute;
-       font-size: 12px;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .txtalert{
-       width: 50%;
-       height: 100%;
-       position: absolute;
-       font-size: 12px;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .txtalert {
-       width: 50%;
-       height: 100%;
-       position: absolute;
-       font-size: 12px;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .txtalert {
-       width: 50%;
-       height: 100%;
-       position: absolute;
-       font-size: 12px;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .txtalert {
-       width: 50%;
-       height: 10%;
-       position: absolute;
-       font-size: 12px;
-   }
- }
-
-
-
- @media only screen and (max-width: 479px) {
-  .boxalert {
-    width: 35%;
-    height: 90%;
-    position: absolute;
-    right: 2%;
-    background-color: #151226;
-    top: 95%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .boxalert{
-    width: 35%;
-    height: 90%;
-    position: absolute;
-    right: 2%;
-    background-color: #151226;
-    top: 95%;
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .boxalert {
-    width: 35%;
-    height: 90%;
-    position: absolute;
-    right: 2%;
-    background-color: #151226;
-    top: 95%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .boxalert {
-    width: 35%;
-    height: 90%;
-    position: absolute;
-    right: 2%;
-    background-color: #151226;
-    top: 95%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .boxalert {
-       width: 35%;
-       height: 90%;
-       position: absolute;
-       background-color: #151226;
-       top: 88%;
-
-   }
- }
-
-
- @media only screen and (max-width: 479px) {
-  .textbox {
-    width: 100%;
-    position: absolute;
-    font-size: 20px;
-    bottom: 22%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .textbox{
-    width: 100%;
-    position: absolute;
-    font-size: 20px;
-    bottom: 22%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .textbox {
-    width: 100%;
-    position: absolute;
-    font-size: 20px;
-    bottom: 22%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .textbox {
-    width: 100%;
-       position: absolute;
-       font-size: 20px;
-       bottom: 22%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .textbox {
-     width: 100%;
-       position: absolute;
-       font-size: 20px;
-       bottom: 20%;
-       left: -12%;
-
-   }
- }
-
-
- @media only screen and (max-width: 479px) {
-  .imgbox {
-       width: 30%;
-       height: 30%;
-       position: absolute;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .imgbox{
-       width: 30%;
-       height: 30%;
-       position: absolute;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .imgbox {
-       width: 30%;
-       height: 30%;
-       position: absolute;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .imgbox {
-       width: 30%;
-       height: 30%;
-       position: absolute;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .imgbox {
-       width: 30%;
-       height: 30%;
-       position: absolute;
-       left: -30%;
-       bottom: 62%;
-
-   }
- }
-
-
- @media only screen and (max-width: 479px) {
-  .imgbox2 {
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    bottom: 5%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-   .imgbox2{
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    bottom: 5%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-   .imgbox2 {
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    bottom: 5%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-   .imgbox2 {
-    width: 25%;
-    height: 25%;
-    position: absolute;
-    bottom: 5%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-   .imgbox2 {
-       width: 25%;
-       height: 25%;
-       position: absolute;
-       bottom: 5%;
-       right: 40%;
-   }
- }
-
-
-
-
- @media only screen and (max-width: 479px) {
-  span {
-    position: absolute;
-    top: 10%;
-    font-size: 35px;
-    left: 25%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  span {
-    position: absolute;
-    top: 10%;
-    font-size: 35px;
-    left: 25%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  span {
-    position: absolute;
-    top: 10%;
-    font-size: 35px;
-    left: 25%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  span {
-    position: absolute;
-    top: 10%;
-    font-size: 35px;
-    left: 25%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  span {
-       position: absolute;
-       top: 38%;
-       font-size: 35px;
-       left: 46%;
-   }
- }
-
-
-
- @media only screen and (max-width: 479px) {
-  h2 {
-   position: absolute;
-       top: 7.5%;
-       left: 25%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  h2 {
-    position: absolute;
-       top: 7.5%;
-       left: 25%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  h2 {
-    position: absolute;
-       top: 7.5%;
-       left: 25%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  h2 {
-    position: absolute;
-    top: 7.5%;
-    left: 25%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  h2 {
-       position: absolute;
-       top: 7.5%;
-       left: -21%;
-   }
- }
-
-
-
- @media only screen and (max-width: 479px) {
-  h3 {
-    position: absolute;
-       width: 20%;
-       height: 15%;
-       right: 3%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  h3 {
-    position: absolute;
-       width: 20%;
-       height: 15%;
-       right: 3%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  h3 {
-    position: absolute;
-       width: 20%;
-       height: 15%;
-       right: 3%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  h3 {
-    position: absolute;
-       width: 20%;
-       height: 15%;
-       right: 3%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  h3 {
-       position: absolute;
-       width: 20%;
-       height: 15%;
-       right: 3%;
-       top: 5%;
-   }
- }
-
-
-
- @media only screen and (max-width: 479px) {
-  .imgDiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 5%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  .imgDiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 5%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .imgDiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 5%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  .imgDiscord {
-    position: absolute;
-       width: 50%;
-       height: 40%;
-       right: 18%;
-       top: 5%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .imgDiscord {
-       position: absolute;
-       width: 50%;
-       height: 40%;
-       right: 25%;
-       top: 5%;
-   }
- }
-
-
- @media only screen and (max-width: 479px) {
-  .txtdiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  .txtdiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .txtdiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  .txtdiscord {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .txtdiscord {
-       position: absolute;
-       width: 100%;
-       top: 60%;
-       font-size: 12px;
-       right: -38%;
-   }
- }
-
-
- @media only screen and (max-width: 479px) {
-  .tr2 {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  .tr2 {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .tr2 {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  .tr2 {
-    position: absolute;
-       width: 60%;
-       height: 40%;
-       right: 16%;
-       top: 15%;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .tr2 {
-       position: absolute;
-       width: 40%;
-       height: 20%;
-       top: 120%;
-       right: -12px;
-   }
- }
-
-
-@media only screen and (max-width: 479px) {
-  .txtsteam {
-    position: absolute;
-       top: 60%;
-       font-size: 10px;
-       width: 100%;
-       left: 1px;
-   }
- }
- 
- @media only screen and (max-width: 959px) {
-  .txtsteam {
-    position: absolute;
-       top: 60%;
-       font-size: 10px;
-       width: 100%;
-       left: 1px;
-   }
- }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .txtsteam {
-    position: absolute;
-    top: 60%;
+.txttop {
     font-size: 10px;
     width: 100%;
-    left: 1px;
-   }
- }
- 
- @media only screen and (max-width: 767px) {
-  .txtsteam {
-    position: absolute;
-       top: 60%;
-       font-size: 10px;
-       width: 100%;
-       left: 1px;
-   }
- }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .txtsteam {
-       position: absolute;
-       top: 50%;
-       font-size: 10px;
-       width: 90%;
-       left: -3%;
-   }
- }
+    height: 100%;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.txttop {
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.txttop {
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.txttop {
+  position: absolute;
+    font-size: 10px;
+    width: 50%;
+    height: 100%;
+    bottom: -80px;
+}
+}
 
 
- @media only screen and (max-width: 479px) {
-  .img {
-    position: absolute;
-       top: 5%;
-       width: 40%;
-   }
+
+@media only screen and (max-width: 479px) {
+.text {
+     font-size: 12px;
+     width: 100%;
+     height: 100%;
+     font-size: 35px;
  }
- 
- @media only screen and (max-width: 959px) {
-  .img {
-    position: absolute;
-       top: 5%;
-       width: 40%;
-   }
+}
+
+@media only screen and (max-width: 959px) {
+ .text{
+     font-size: 10px;
+     width: 100%;
+     height: 100%;
+     font-size: 35px;
  }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .img {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .text {
+     font-size: 12px;
+     width: 100%;
+     height: 100%;
+     font-size: 35px;
  }
- 
- @media only screen and (max-width: 767px) {
-  .img {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-   }
+}
+
+@media only screen and (max-width: 767px) {
+ .text {
+     font-size: 14px;
+     width: 100%;
+     height: 100%;
+     font-size: 35px;
  }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .img {
-       position: absolute;
-       top: 5%;
-       width: 30%;
-       right: 30%;
-   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .text {
+   position: absolute;
+     width: 80%;
+     height: 100%;
+     top: 15.8%;
+     left: 11%;
  }
+}
 
 
- @media only screen and (max-width: 479px) {
-  .tr {
-    position: absolute;
-       top: 5%;
-       width: 40%;
-   }
+
+@media only screen and (max-width: 479px) {
+.tr3 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  top: 15%;
+  left: 9%;
  }
- 
- @media only screen and (max-width: 959px) {
-  .tr {
-    position: absolute;
-       top: 5%;
-       width: 40%;
-   }
+}
+
+@media only screen and (max-width: 959px) {
+ .tr3{
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  top: 15%;
+  left: 9%;
  }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .tr {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .tr3 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  top: 15%;
+  left: 9%;
+     
  }
- 
- @media only screen and (max-width: 767px) {
-  .tr {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-   }
+}
+
+@media only screen and (max-width: 767px) {
+ .tr3 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  top: 15%;
+  left: 9%;
  }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .tr {
-       position: absolute;
-       width: 80%;
-       height: 70%;
-       top: 20%;
-   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .tr3 {
+     width: 90px;
+     height: 90px;
+     position: absolute;
+     border-radius: 50%;
+     top: 15%;
+     left: 15%;
  }
+}
 
 
- @media only screen and (max-width: 479px) {
-  .imggnar {
-    position: absolute;
-       top: 5%;
-       width: 40%;
-   }
+
+@media only screen and (max-width: 479px) {
+.tralert {
+  width: 58%;
+  height: 20%;
+  position: absolute;
+  bottom: 2%;
+  left: -3%;
  }
- 
- @media only screen and (max-width: 959px) {
-  .imggnar {
-    position: absolute;
-       top: 5%;
-       width: 40%;
-   }
+}
+
+@media only screen and (max-width: 959px) {
+ .tralert{
+  width: 58%;
+  height: 20%;
+  position: absolute;
+  bottom: 2%;
+  left: -3%;
  }
- 
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .imggnar {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .tralert {
+  width: 58%;
+  height: 20%;
+  position: absolute;
+  bottom: 2%;
+  left: -3%;
+     
  }
- 
- @media only screen and (max-width: 767px) {
-  .imggnar {
-    position: absolute;
-    top: 5%;
-    width: 40%;
-   }
+}
+
+@media only screen and (max-width: 767px) {
+ .tralert {
+  width: 58%;
+  height: 20%;
+  position: absolute;
+  bottom: 2%;
+  left: -3%;
  }
- 
- @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .imggnar {
-       position: absolute;
-      width: 100%;
-      height: 100%;
-       top: 10%;
-       border-radius: 50%;
-       right: 3%;
-   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .tralert {
+     width: 58%;
+     height: 20%;
+     position: absolute;
+     bottom: 2%;
+     left: -3%;
  }
+}
+
+
+@media only screen and (max-width: 479px) {
+.txtalert {
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     font-size: 12px;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+ .txtalert{
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     font-size: 12px;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .txtalert {
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     font-size: 12px;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+ .txtalert {
+     width: 50%;
+     height: 100%;
+     position: absolute;
+     font-size: 12px;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .txtalert {
+     width: 50%;
+     height: 10%;
+     position: absolute;
+     font-size: 12px;
+ }
+}
+
+
+
+@media only screen and (max-width: 479px) {
+.boxalert {
+  width: 35%;
+  height: 90%;
+  position: absolute;
+  right: 2%;
+  background-color: #151226;
+  top: 95%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+ .boxalert{
+  width: 35%;
+  height: 90%;
+  position: absolute;
+  right: 2%;
+  background-color: #151226;
+  top: 95%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .boxalert {
+  width: 35%;
+  height: 90%;
+  position: absolute;
+  right: 2%;
+  background-color: #151226;
+  top: 95%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+ .boxalert {
+  width: 35%;
+  height: 90%;
+  position: absolute;
+  right: 2%;
+  background-color: #151226;
+  top: 95%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .boxalert {
+     width: 35%;
+     height: 90%;
+     position: absolute;
+     background-color: #151226;
+     top: 88%;
+
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.textbox {
+  width: 100%;
+  position: absolute;
+  font-size: 20px;
+  bottom: 22%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+ .textbox{
+  width: 100%;
+  position: absolute;
+  font-size: 20px;
+  bottom: 22%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .textbox {
+  width: 100%;
+  position: absolute;
+  font-size: 20px;
+  bottom: 22%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+ .textbox {
+  width: 100%;
+     position: absolute;
+     font-size: 20px;
+     bottom: 22%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .textbox {
+   width: 100%;
+     position: absolute;
+     font-size: 18px;
+     bottom: 17%;
+     right: -14%;
+
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.imgbox {
+     width: 30%;
+     height: 30%;
+     position: absolute;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+ .imgbox{
+     width: 30%;
+     height: 30%;
+     position: absolute;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .imgbox {
+     width: 30%;
+     height: 30%;
+     position: absolute;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+ .imgbox {
+     width: 30%;
+     height: 30%;
+     position: absolute;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .imgbox {
+     width: 30%;
+     height: 30%;
+     position: absolute;
+     left: -20%;
+     bottom: 62%;
+
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.imgbox2 {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  bottom: 5%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+ .imgbox2{
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  bottom: 5%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+ .imgbox2 {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  bottom: 5%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+ .imgbox2 {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  bottom: 5%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+ .imgbox2 {
+     width: 25%;
+     height: 25%;
+     position: absolute;
+     bottom: 5%;
+     right: 35%;
+ }
+}
+
+
+
+
+@media only screen and (max-width: 479px) {
+span {
+  position: absolute;
+  top: 10%;
+  font-size: 35px;
+  left: 25%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+span {
+  position: absolute;
+  top: 10%;
+  font-size: 35px;
+  left: 25%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+span {
+  position: absolute;
+  top: 10%;
+  font-size: 35px;
+  left: 25%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+span {
+  position: absolute;
+  top: 10%;
+  font-size: 35px;
+  left: 25%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+span {
+     position: absolute;
+     top: 38%;
+     font-size: 35px;
+     left: 46%;
+ }
+}
+
+
+
+@media only screen and (max-width: 479px) {
+h2 {
+ position: absolute;
+     top: 7.5%;
+     left: 25%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+h2 {
+  position: absolute;
+     top: 7.5%;
+     left: 25%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+h2 {
+  position: absolute;
+     top: 7.5%;
+     left: 25%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+h2 {
+  position: absolute;
+  top: 7.5%;
+  left: 25%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+h2 {
+     position: absolute;
+     top: 7.5%;
+     left: -21%;
+ }
+}
+
+
+
+@media only screen and (max-width: 479px) {
+h3 {
+  position: absolute;
+     width: 20%;
+     height: 15%;
+     right: 3%;
+     top: 15%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+h3 {
+  position: absolute;
+     width: 20%;
+     height: 15%;
+     right: 3%;
+     top: 15%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+h3 {
+  position: absolute;
+     width: 20%;
+     height: 15%;
+     right: 3%;
+     top: 15%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+h3 {
+  position: absolute;
+     width: 20%;
+     height: 15%;
+     right: 3%;
+     top: 15%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+h3 {
+     position: absolute;
+     width: 20%;
+     height: 15%;
+     right: 3%;
+     top: 5%;
+ }
+}
+
+
+
+@media only screen and (max-width: 479px) {
+.imgDiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 5%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.imgDiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 5%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.imgDiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 5%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.imgDiscord {
+  position: absolute;
+     width: 50%;
+     height: 40%;
+     right: 18%;
+     top: 5%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.imgDiscord {
+     position: absolute;
+     width: 50%;
+     height: 40%;
+     right: 25%;
+     top: 5%;
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.txtdiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.txtdiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.txtdiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.txtdiscord {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.txtdiscord {
+     position: absolute;
+     width: 100%;
+     top: 60%;
+     font-size: 12px;
+     right: -38%;
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.tr2 {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.tr2 {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.tr2 {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.tr2 {
+  position: absolute;
+     width: 60%;
+     height: 40%;
+     right: 16%;
+     top: 15%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.tr2 {
+     position: absolute;
+     width: 40%;
+     height: 20%;
+     top: 120%;
+     right: -12px;
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.txtsteam {
+  position: absolute;
+     top: 60%;
+     font-size: 10px;
+     width: 100%;
+     left: 1px;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.txtsteam {
+  position: absolute;
+     top: 60%;
+     font-size: 10px;
+     width: 100%;
+     left: 1px;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.txtsteam {
+  position: absolute;
+  top: 60%;
+  font-size: 10px;
+  width: 100%;
+  left: 1px;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.txtsteam {
+  position: absolute;
+     top: 60%;
+     font-size: 10px;
+     width: 100%;
+     left: 1px;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.txtsteam {
+     position: absolute;
+     top: 50%;
+     font-size: 10px;
+     width: 90%;
+     left: -3%;
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.img {
+  position: absolute;
+     top: 5%;
+     width: 40%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.img {
+  position: absolute;
+     top: 5%;
+     width: 40%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.img {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.img {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.img {
+     position: absolute;
+     top: 5%;
+     width: 30%;
+     right: 30%;
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.tr {
+  position: absolute;
+     top: 5%;
+     width: 40%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.tr {
+  position: absolute;
+     top: 5%;
+     width: 40%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.tr {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.tr {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.tr {
+     position: absolute;
+     width: 80%;
+     height: 70%;
+     top: 20%;
+ }
+}
+
+
+@media only screen and (max-width: 479px) {
+.imggnar {
+  position: absolute;
+     top: 5%;
+     width: 40%;
+ }
+}
+
+@media only screen and (max-width: 959px) {
+.imggnar {
+  position: absolute;
+     top: 5%;
+     width: 40%;
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+.imggnar {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+ }
+}
+
+@media only screen and (max-width: 767px) {
+.imggnar {
+  position: absolute;
+  top: 5%;
+  width: 40%;
+ }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.imggnar {
+     position: absolute;
+    width: 100%;
+    height: 100%;
+     top: 10%;
+     border-radius: 50%;
+     right: 3%;
+ }
+}
 
 
 

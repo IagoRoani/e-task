@@ -153,53 +153,21 @@ a{
   }
 
 
-  @media only screen and (max-width: 479px) {
-    .btns {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 22%;
-      top: 18%;
-     }
-   }
-   
-   @media only screen and (max-width: 959px) {
-    .btns {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 22%;
-      top: 18%;
-     }
-   }
-   
-   @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .btns {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 22%;
-      top: 18%;
-     }
-   }
-   
-   @media only screen and (max-width: 767px) {
-    .btns {
-      position: absolute;
-         width: 100%;
-         height: 100%;
-         left: 22%;
-         top: 18%;
-     }
-   }
-   
-   @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
     .our-team {
          width: 100%;
          height: 90%;
-         left: 5%;
-         top: 90%;
+         position: relative;
+         top: 10%;
      }
    }
 
+   @media only screen and (min-width: 480px) and (max-width: 767px) {
+    #container {
+      height: 150vh;
+     }
+   }
+ 
+   
+   
  
