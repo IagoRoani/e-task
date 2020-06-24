@@ -396,7 +396,7 @@ h2 span {
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .txttop {
     position: absolute;
-      font-size: 10px;
+      font-size: 15px;
       width: 50%;
       height: 100%;
       bottom: -80px;
@@ -505,7 +505,7 @@ h2 span {
        position: absolute;
        border-radius: 50%;
        top: 15%;
-       left: 9%;
+       left: 14%;
    }
  }
 
@@ -705,9 +705,9 @@ h2 span {
    .textbox {
      width: 100%;
        position: absolute;
-       font-size: 20px;
-       bottom: 20%;
-       left: -12%;
+       font-size: 18px;
+       bottom: 18%;
+       left: -10%;
 
    }
  }
@@ -750,7 +750,7 @@ h2 span {
        width: 30%;
        height: 30%;
        position: absolute;
-       left: -30%;
+       left: -20%;
        bottom: 62%;
 
    }
@@ -799,7 +799,7 @@ h2 span {
        height: 25%;
        position: absolute;
        bottom: 5%;
-       right: 40%;
+       right: 35%;
    }
  }
 
