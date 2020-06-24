@@ -9,6 +9,7 @@
     --secondary-color: #151226;
     --contrast-color:#EC7505;
   }
+  
   #container {
     display: flex;
     height: 100vh;
@@ -504,7 +505,7 @@ h2 span {
        height: 90px;
        position: absolute;
        border-radius: 50%;
-       top: 15%;
+       top: 18%;
        left: 9%;
    }
  }
@@ -705,9 +706,9 @@ h2 span {
    .textbox {
      width: 100%;
        position: absolute;
-       font-size: 20px;
-       bottom: 20%;
-       left: -12%;
+       font-size: 18px;
+       bottom: 17%;
+       right: -14%;
 
    }
  }
@@ -750,7 +751,7 @@ h2 span {
        width: 30%;
        height: 30%;
        position: absolute;
-       left: -30%;
+       left: -20%;
        bottom: 62%;
 
    }
@@ -799,7 +800,7 @@ h2 span {
        height: 25%;
        position: absolute;
        bottom: 5%;
-       right: 40%;
+       right: 35%;
    }
  }
 
@@ -1228,7 +1229,7 @@ h2 span {
  @media only screen and (min-width: 480px) and (max-width: 767px) {
   .tr {
        position: absolute;
-       width: 80%;
+       width: 70%;
        height: 70%;
        top: 20%;
    }

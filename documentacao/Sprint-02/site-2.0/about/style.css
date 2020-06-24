@@ -224,10 +224,19 @@ a{
  
  @media only screen and (min-width: 480px) and (max-width: 767px) {
   .row {
-       position: absolute;
-       width: 70%;
-       height: 40%;
-       left: 22%;
-       top: 5%;
+    width: 70%;
+    top: 5%;
+    height: 50%;
    }
  }
+ 
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+  #container {
+    height: 210vh;
+   }
+ }
+
+
+ 
+ 
+ 
