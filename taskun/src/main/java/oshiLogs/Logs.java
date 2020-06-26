@@ -6,6 +6,7 @@
 package oshiLogs;
 
 import com.mycompany.oshente.CPU;
+import com.mycompany.oshente.GPU;
 import com.mycompany.oshente.HD;
 import com.mycompany.oshente.RAM;
 import java.io.FileNotFoundException;
@@ -52,12 +53,13 @@ public class Logs {
         CPU cpu1 = new CPU();
         RAM ram = new RAM();
         HD hd = new HD();
-        
+        GPU gpu = new GPU();
         
         escreva.println(String.format("Operacao recuperada com sucesso %s", dataAtual)); //Mensagem de sucesso
         escreva02.println(String.format("%s", dataAtual + " Procentagem de uso: " + ram.getDesempenhoMemoria()));
         escreva04.println(String.format("%s", dataAtual + " Porcentagem de uso: " + hd.getPorcentagemDisponivel()));
-        escreva01.println(String.format("%s", dataAtual + "Porcentagem de uso: " + cpu1.getDesempenho())); //Simule um erro e a mensagem será outra    
+        escreva03.println(String.format("%s", dataAtual + " Porcentagem de uso: " + gpu.getRAM()));
+        escreva01.println(String.format("%s", dataAtual + " Porcentagem de uso: " + cpu1.getDesempenho())); //Simule um erro e a mensagem será outra    
         escreva.close();
         escreva01.close();
         escreva02.close();
