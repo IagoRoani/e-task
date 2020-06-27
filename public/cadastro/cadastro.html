@@ -6,7 +6,7 @@
     <title>Cadastro-Etask</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="s    tylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -20,13 +20,14 @@
 <body>
     <div id="container">
                      
-         <form id="form_cadastro" method="POST" class="login">
+         <form id="form_cadastro" class="login">
           
                <h2><p> REGISTRE-SE</p></h2>
 
-            <input id="nome" type="text" placeholder="Nome">
-            <input id="login" type="text" placeholder="Username">
-            <input id="senha" type="password" placeholder="Password">
+            <input name="emailC" id="emailC" type="text" placeholder="Email">
+            <input name="nome" id="nome" type="text" placeholder="Nome">
+            <input name="sobrenome" id="sobrenome" type="text" placeholder="Sobrenome">
+            <input name="senha" id="senha" type="password" placeholder="Password">
 
             <button onclick="registrar()">Go to Dashboard!</button>
           </form>
@@ -42,11 +43,11 @@
                 Swal.fire({
                     title: 'Carregando...',
                     text: 'Estamos efetuando o seu cadastro!',
-                    imageUrl: 'aguarde.gif',
+                    imageUrl: 'gnar.png',
                     imageAlt: 'Custom image',
                     showConfirmButton: false
                 })
-                fetch("./usuarios/cadastro", {
+                fetch("../usuarios/cadastro", {
                     method: "POST",
                     body: formulario
                 }).then(function(response) {
@@ -59,19 +60,25 @@
                                     toast: true,
                                     position: 'top-end',
                                     showConfirmButton: false,
-                                    timer: 3000
+                                    timer: 1500
                                 });
                                 Toast.fire({
                                     type: 'success',
                                     title: 'Cadastrado com sucesso!'
                                 }).then(function() {
                                     sessionStorage.id = resposta.id;
-                                    window.location.href = '../login/login.html';
+                                    window.location.href = '../index.html';
                                 })
                             }
                         });
                     } else {
-                        Swal.fire('Erro no cadastro', 'Tente novamente', 'error');
+                        Swal.fire({
+                            title: 'Erro no cadastro',
+                    text: 'Tente novamente',
+                    imageUrl: 'gnar.png',
+                    imageAlt: 'Custom image',
+                    showConfirmButton: false
+                        });
                     }
                 });
                 return false;

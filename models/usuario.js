@@ -11,12 +11,16 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
-		},		
+		},	
+		email:{
+			type: DataTypes.STRING,
+			allowNull: false
+		},	
 		nome: {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		login: {
+		sobrenome: {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
@@ -26,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
 		}
 	}, 
 	{
-		tableName: 'usuario', 
+		tableName: 'CLIENTE', 
 		freezeTableName: true, 
 		underscored: true,
 		timestamps: false,
