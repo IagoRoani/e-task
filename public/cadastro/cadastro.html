@@ -66,8 +66,8 @@
                                     type: 'success',
                                     title: 'Cadastrado com sucesso!'
                                 }).then(function() {
-                                    sessionStorage.id = resposta.id;
-                                    window.location.href = '../index.html';
+                                    sessionStorage.idCliente = resposta.idCliente;
+                                    window.location.href = '../login/login.html';
                                 })
                             }
                         });
