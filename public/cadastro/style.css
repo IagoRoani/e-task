@@ -59,7 +59,7 @@
     width: 70%;
     border: 0;
     padding: 10px 0;
-    margin-top: 2%;
+    margin-top: 10%;
     margin-left: 15%;
     border-radius: 5px;
     background-color: #151226;
@@ -109,6 +109,11 @@
      margin-left: 25%;
         color:#151226;
  }
- 
+
   
- 
+ .lista{
+  display: inline;
+  margin: 3px;
+  color: #151226;
+  font-size: 18px;
+}

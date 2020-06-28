@@ -10,17 +10,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.2/dist/sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
 
 </head>
 <body>
     <div id="container">
                      
-         <form id="form_cadastro" class="login">
+         <form id="form_cadastro"  class="login">
           
                <h2><p> REGISTRE-SE</p></h2>
 
@@ -28,6 +23,8 @@
             <input name="nome" id="nome" type="text" placeholder="Nome">
             <input name="sobrenome" id="sobrenome" type="text" placeholder="Sobrenome">
             <input name="senha" id="senha" type="password" placeholder="Password">
+
+            <a class="lista" href="../login/login.html"><li class="lista">Já possui cadastro?</li></a>
 
             <button onclick="registrar()">Go to Dashboard!</button>
           </form>
@@ -39,48 +36,24 @@
 
          <script>
             function registrar() {
-                var formulario = new URLSearchParams(new FormData(form_cadastro));
-                Swal.fire({
-                    title: 'Carregando...',
-                    text: 'Estamos efetuando o seu cadastro!',
-                    imageUrl: 'gnar.png',
-                    imageAlt: 'Custom image',
-                    showConfirmButton: false
-                })
-                fetch("../usuarios/cadastro", {
-                    method: "POST",
-                    body: formulario
-                }).then(function(response) {
-                    if (response.ok) {
-                        response.json().then(function(resposta) {
-                            if (resposta.ok == false) {
-                                Swal.fire('Algo deu errado', 'Tente novamente', 'warning');
-                            } else {
-                                const Toast = Swal.mixin({
-                                    toast: true,
-                                    position: 'top-end',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-                                Toast.fire({
-                                    type: 'success',
-                                    title: 'Cadastrado com sucesso!'
-                                }).then(function() {
-                                    sessionStorage.idCliente = resposta.idCliente;
-                                    window.location.href = '../login/login.html';
-                                })
-                            }
-                        });
-                    } else {
-                        Swal.fire({
-                            title: 'Erro no cadastro',
-                    text: 'Tente novamente',
-                    imageUrl: 'gnar.png',
-                    imageAlt: 'Custom image',
-                    showConfirmButton: false
-                        });
-                    }
+                alert(`TESTEEEEEEEE`);
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastro", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+                window.location.href='../login/login.html';
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
                 });
-                return false;
             }
+        });
+
+        return false;
+    }
             </script>

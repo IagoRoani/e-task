@@ -18,7 +18,7 @@
           <div id="container">
          <form id="form_login" class="login">
 
-            <input id="nome" name="email" type="text" placeholder="Nome">
+            <input id="nome" name="email" type="text" placeholder="Email">
             <input id="senha" name="senha" type="password" placeholder="Password">
 
             <input id='one' type='checkbox' />
@@ -39,20 +39,25 @@
 
          <script>
             function entrar() {
+                alert(`TESTEEEEEEEE`);
         // aguardar();
         var formulario = new URLSearchParams(new FormData(form_login));
-        fetch("/usuarios/autenticar", {
+        fetch("../usuarios/autenticar", {
             method: "POST",
             body: formulario
         }).then(resposta => {
             if (resposta.ok) {
+                alert(`TESTEEEEEEEE CERTO`);
+                console.log("NÃO ENTROU");
                 resposta.json().then(json => {
+                    console.log("ENTROU");
                     sessionStorage.email = json.email;
                     sessionStorage.senha = json.senha;
-                    window.location.href = '../sistema-web/Dashboard.html';
+                    window.location.href = 'https://www.youtube.com/?hl=pt&gl=BR';
                 });
 
             } else {
+                alert(`TESTEEEEEEEE ERRADO`);
                 console.log('Erro de login!');
                 response.text().then(texto => {
                     console.error(texto);
