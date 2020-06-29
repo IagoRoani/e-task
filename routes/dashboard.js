@@ -15,8 +15,8 @@ router.get("/", (req, res) => {
 })
 
 router.get("/maquina/:id?", (req, res) => { 
-    let filter = ''; if (req.params.id) filter = "and nome_Maquina= '" + req.params.id+"'";
-    execSQLQuery("SELECT  nome_Maquina, D.* FROM [dbo].[Dashboard] as D, [dbo].[Maquina] WHERE fk_Maquina = id_Maquina " + filter, res)
+    let filter = ''; if (req.params.id) filter = " WHERE fk_Maquina = " + parseInt(req.params.id);
+    execSQLQuery("SELECT  nome_Maquina, D.* FROM [dbo].[Dashboard] as D, [dbo].[Maquina] " + filter, res)
 })
 
 module.exports = router;

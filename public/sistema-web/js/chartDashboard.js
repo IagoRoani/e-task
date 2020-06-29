@@ -1,10 +1,12 @@
 window.myCharts = [];
 var id_Cliente = localStorage.getItem("id_Cliente");
-var nameMaquina = localStorage.getItem("nameMaquina");
+var idMaquina = localStorage.getItem("idMaquina");
 var valueCPU,valueRAM, valueHD, valueGPU;
 var lineCPU, lineRAM, lineHD, lineGPU;
 
 function gerarGrafico() {
+    dadosDashboard(idMaquina);
+
     for (i = 0; i < window.myCharts.length; i++) {
         if (window.myCharts[i] != undefined) {
             window.myCharts[i].destroy();
@@ -48,6 +50,8 @@ function gerarGrafico() {
 
     chartLine.classList.remove('chartjs-render-monitor');
 
+    
+
     if(valueCPU != undefined ){
         var div = document.getElementsByClassName("tudo_junto");
         for (var i = 0; i < div.length; i++) {
@@ -58,8 +62,8 @@ function gerarGrafico() {
     // window.myCharts[ window.myCharts.length - 1].h
     // console.log("Total de gráficos "+window.myCharts.length);
 }
-function dadosDashboard() {
-    axios.get("../dashboard/maquina/"+nameMaquina).then(d => {
+function dadosDashboard(id) {
+    axios.get("../dashboard/maquina/"+id).then(d => {
         var ultimaPosicao = d.data.length - 1;
         var dash = d.data[ultimaPosicao];
 
@@ -87,36 +91,42 @@ function dadosDashboard() {
     });
 }
 
-function dadosGraficoLinha() {
-    axios.get("../chartline/cpu/" + nameMaquina).then(l => {
+function dadosGraficoLinha(id) {
+    axios.get("../chartline/cpu/" + id).then(l => {
         lineCPU = l.data[0].cpu;
         // console.log(lineCPU);
     });
 
-    axios.get("../chartline/ram/" + nameMaquina).then(l => {
+    axios.get("../chartline/ram/" + id).then(l => {
         lineRAM = l.data[0].ram;
         // console.log(lineRAM);
     });
 
-    axios.get("../chartline/hd/" + nameMaquina).then(l => {
+    axios.get("../chartline/hd/" + id).then(l => {
         lineHD = l.data[0].hd;        
     });
     
-    axios.get("../chartline/gpu/" + nameMaquina).then(l => {
+    axios.get("../chartline/gpu/" + id).then(l => {
         lineGPU = l.data[0].gpu;
     });
 }
 window.onload = function () {
-    dadosMaquina(id_Cliente);
     speedTest();
-    loopGrafico();
+    dadosMaquina(id_Cliente);
+    dadosGraficoLinha(idMaquina);
+    dadosDashboard(idMaquina);
+    loopGraficoDash();
+    loopGraficoLine();
 };
-function loopGrafico() {
-    dadosDashboard(nameMaquina);
-    dadosGraficoLinha();
+function loopGraficoDash() {
     gerarGrafico();
     setTimeout(() => {
-        // console.log("AAAAA");
-        loopGrafico();
-    }, 500);
+        loopGraficoDash();
+    }, 700);
+}
+function loopGraficoLine() {
+    dadosGraficoLinha(idMaquina);
+    setTimeout(() => {
+        loopGraficoLine();
+    }, 10000);
 }

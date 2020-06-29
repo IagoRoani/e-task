@@ -1,8 +1,8 @@
 function dadosMaquina(id) {
     axios.get("../maquinas/nome-maquina/"+id).then(m => {
         var maq = m.data[0];
-        console.log(maq);
-        localStorage.setItem("nameMaquina", maq.nome_Maquina);
+
+        localStorage.setItem("idMaquina", maq.id_Maquina);
         //OS
         sistemaOperacional.innerHTML = maq.sistema_Operacional;
         nomeMaquina.innerHTML = maq.nome_Maquina;

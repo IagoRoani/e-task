@@ -11,7 +11,7 @@ function execSQLQuery(sqlQry, res) {
 
 
 router.get("/cpu/:id?", (req, res) => { //DESKTOP-I3UCK4H
-    let filter = ''; if (req.params.id) filter = " WHERE nome_Maquina = '" + req.params.id+"'";
+    let filter = ''; if (req.params.id) filter = " WHERE id_Maquina = " + parseInt(req.params.id);
     var sqlQuery = "SELECT ";
     for (var i = 0; i <24; i++) {
         var pesquisa = "0";
@@ -25,7 +25,7 @@ router.get("/cpu/:id?", (req, res) => { //DESKTOP-I3UCK4H
 })
 
 router.get("/ram/:id?", (req, res) => { //DESKTOP-I3UCK4H
-    let filter = ''; if (req.params.id) filter = " WHERE nome_Maquina = '" + req.params.id+"'";
+    let filter = ''; if (req.params.id) filter = " WHERE id_Maquina = " + parseInt(req.params.id);
     var sqlQuery = "SELECT ";
     for (var i = 0; i <24; i++) {
         var pesquisa = "0";
@@ -39,7 +39,7 @@ router.get("/ram/:id?", (req, res) => { //DESKTOP-I3UCK4H
 })
 
 router.get("/hd/:id?", (req, res) => { //DESKTOP-I3UCK4H
-    let filter = ''; if (req.params.id) filter = " WHERE nome_Maquina = '" + req.params.id+"'";
+    let filter = ''; if (req.params.id) filter = " WHERE id_Maquina = " + parseInt(req.params.id);
     var sqlQuery = "SELECT ";
     for (var i = 0; i <24; i++) {
         var pesquisa = "0";
@@ -53,7 +53,7 @@ router.get("/hd/:id?", (req, res) => { //DESKTOP-I3UCK4H
 })
 
 router.get("/gpu/:id?", (req, res) => { //DESKTOP-I3UCK4H
-    let filter = ''; if (req.params.id) filter = " WHERE nome_Maquina = '" + req.params.id+"'";
+    let filter = ''; if (req.params.id) filter = " WHERE id_Maquina = " + parseInt(req.params.id);
     var sqlQuery = "SELECT ";
     for (var i = 0; i <24; i++) {
         var pesquisa = "0";

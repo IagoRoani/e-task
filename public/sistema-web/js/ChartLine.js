@@ -58,7 +58,7 @@ class ChartLine {
                 pointHoverRadius: 2.5,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.dataHD
+                data: this.dataGPU
               
             },
             {
@@ -73,7 +73,8 @@ class ChartLine {
                 pointHoverRadius: 2.5,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: this.dataGPU
+                data: this.dataHD
+
                 
             }
             ],
