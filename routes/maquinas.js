@@ -24,6 +24,4 @@ router.get("/nome-maquina/:id?", (req, res) => { // DESKTOP-I3UCK4H
     execSQLQuery("SELECT * FROM Maquina  " + filter, res)
 })
 
-
-
 module.exports = router;

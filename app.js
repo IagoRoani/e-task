@@ -14,6 +14,7 @@ const leiturasRouter = require('./routes/leituras');
 const maquinasRouter = require('./routes/maquinas');
 const dashboardRouter = require('./routes/dashboard');
 const chartlineRouter = require('./routes/chartline');
+const clienteRouter = require('./routes/cliente');
 
 const app = express();
 
@@ -32,5 +33,6 @@ app.use('/leituras', leiturasRouter);
 app.use('/maquinas', maquinasRouter);
 app.use('/dashboard', dashboardRouter);
 app.use('/chartline', chartlineRouter);
+app.use('/cliente', clienteRouter);
 
 module.exports = app;

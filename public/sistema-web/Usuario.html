@@ -29,7 +29,7 @@
                 </div>
             </a>
 
-            <a href="Relatorios.html">
+            <!-- <a href="Relatorios.html">
                 <div>
                     <img class="material-icons" src="img/history-white-24dp.svg"><span
                         class="text-menu">Relatórios</span>
@@ -41,7 +41,7 @@
                     <img class="material-icons" src="img/turned_in-white-24dp.svg"><span
                         class="text-menu">Newsletter</span>
                 </div>
-            </a>
+            </a> -->
 
             <a href="#" class="active">
                 <div class="active_div">
@@ -59,7 +59,7 @@
                 <span onclick="Cancela()">X</span><br>
                 <img class="img_sair" src="img/gnar.png" alt="">
                 <p>Tem certeza que deseja sair do sistema?</p><button class='cancelar button_op'
-                    onclick='Cancela()'>Não</button><button><a class='sim button_op''>Sim</a></button>
+                    onclick='Cancela()'>Não</button><button onclick='simSair()'><a class='sim button_op''>Sim</a></button >
             </div>
         </div>
     </nav>
@@ -70,9 +70,9 @@
                 <div class="imagem_perfil">
                     <img class="img_perfil" src="img/user.png">
                 </div>
-                <p class="nome_user">Streamer Nome, 19 anos</p>
+                <p id="nome_user" class="nome_user"></p>
                 <div class="email_user dados">
-                    <img class="icon_email" src="img/email-white-24dp.svg"><p>usuario_jogador@email.com.br </p>
+                    <img class="icon_email" src="img/email-white-24dp.svg"><p id="email_user">usuario_jogador@email.com.br </p>
                 </div>
                 <div class="endereco_user dados">
                     <img class="icon_bandeira" src="img/bandeira/brazil.png"><p>SP - São Paulo</p>
@@ -81,24 +81,27 @@
             <div class="detalhes_usuario">
                 <div class="opcao">
                     <button class="link" onclick="openCity(event, 'computador')">Propriedades do computador</button>
-                    <button class="link" onclick="openCity(event, 'jogos')">Jogos favoritos</button>
+                    <button class="link" onclick="openCity(event, 'jogos')" style="display: none;">Jogos favoritos</button>
                 </div>
 
                 <div id="computador" class="detalhe computador">
                 
                     <h3>Sistema Operacional</h3>
-                    <b>Sistema:</b><span> Microsoft Windowns 10</span><br>
-                    <b>Tipo de sistema: </b><span>64 bits</span>
+                    <b>Sistema: </b><span id="nomeMaquina"></span><br>
+                    <b>Tipo de sistema: </b><span id="tipoOS"></span>
                     
                     <h3>Processador </h3>
-                    <b>Nome: </b><span> Intel(R) Core(TM) i3 CPU 500 3.20Ghz</span>
+                    <b>Modelo: </b><span id="modeloCPU"></span>
                     
                     <h3>Memória RAM </h3>
-                    <b>Memória instalada: </b><span> 8,0 GB</span>
+                    <b>Memória instalada: </b><span id="memoriaRAM"></span>
                     
-                    <h3>Disco Local (C:) </h3>
-                    <b>Utilizável: </b> <samp> 465 GB</samp>
-                    <b>Disponível: </b> <samp> 161 GB</samp>
+                    <h3 id="discoHD">Disco Local (C:) </h3>
+                    <b>Utilizável: </b> <samp id="utilizavelHD"> </samp>
+                    <b>Disponível: </b> <samp id="disponivelHD"> </samp>                   
+
+                    <h3 id="modeloGPU"></h3>
+                    <b >Versão: </b> <samp id="versaoGPU"></samp>
                 </div>
 
                 <div id="jogos" class="jogo detalhe">
@@ -116,6 +119,8 @@
     </div>
 </body>
 </html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/sair.js"></script>
 <script src="js/usuario.js"></script>
+<script src="js/cliente.js"></script>
 <script src="js/jogos.js"></script>

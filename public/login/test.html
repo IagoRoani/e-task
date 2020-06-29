@@ -25,8 +25,8 @@
     <div id="container">
         <form id="form_login" class="login">
 
-            <input class="email" id="email" name="email" type="text" placeholder="Email">
-            <input class="email" id="senha" name="senha" type="password" placeholder="Password">
+            <input id="nome" name="email" type="text" placeholder="Email">
+            <input id="senha" name="senha" type="password" placeholder="Password">
 
             <input id='one' type='checkbox' />
             <label for='one'>
@@ -40,36 +40,25 @@
             <a class="lista" href="../cadastro/cadastro.html">
                 <li class="lista">Não tem cadastro?</li>
             </a>
-            <input onclick="entrarnoSistema()" value="Go to Dashboard!" type="button">
 
+            <button onclick="entrarnoSistema()">Go to Dashboard!</button>
         </form>
     </div>
+    <button onclick="entrarnoSistema()">Go to Dashboard!</button>
 </body>
 
 </html>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="login.js"></script>
-<script src="../sistema-web/js/all.js"></script>
 <script>
     function entrarnoSistema() {
-        var email= document.getElementById("email").value;
-        var senha = document.getElementById("senha").value;
-        axios.get(`../cliente/autenticar/${email}/${senha}`).then(u => {
-            var cliente = u.data[0];
-            console.log(cliente);
-            if(cliente != undefined ){
-                localStorage.setItem("id_Cliente", cliente.id_Cliente);
-                localStorage.setItem("emailCliente", cliente.email);
-                localStorage.setItem("nomeCliente", cliente.nome);
-                localStorage.setItem("sobrenomeCliente", cliente.sobrenome);
-                window.location.href = '../sistema-web/Dashboard.html';
-            }
-            else{
-                alert("usuário não existe")
-            }
+        alert("aaaaa");
+        axios.get("/cliente/").then(u => {
+            var maq = u.data[0];
+            console.log(u);
         });
     }
+
         // alert(`TESTEEEEEEEE`);
         // // aguardar();
         // var formulario = new URLSearchParams(new FormData(form_login));
@@ -96,5 +85,5 @@
         //     }
         // });
 
-
+    
 </script>

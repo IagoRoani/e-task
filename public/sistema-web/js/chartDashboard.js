@@ -1,5 +1,6 @@
 window.myCharts = [];
-var id = "DESKTOP-I3UCK4H";
+var nameMaquina = localStorage.getItem("nameMaquina");
+var id_Cliente = localStorage.getItem("id_Cliente");
 var valueCPU,valueRAM, valueHD, valueGPU;
 var lineCPU, lineRAM, lineHD, lineGPU;
 
@@ -59,7 +60,7 @@ function gerarGrafico() {
     // console.log("Total de gráficos "+window.myCharts.length);
 }
 function dadosDashboard() {
-    axios.get("../dashboard/maquina/"+id).then(d => {
+    axios.get("../dashboard/maquina/"+nameMaquina).then(d => {
         var ultimaPosicao = d.data.length - 1;
         var dash = d.data[ultimaPosicao];
 
@@ -88,36 +89,35 @@ function dadosDashboard() {
 }
 
 function dadosGraficoLinha() {
-    axios.get("../chartline/cpu/" + id).then(l => {
+    axios.get("../chartline/cpu/" + nameMaquina).then(l => {
         lineCPU = l.data[0].cpu;
         // console.log(lineCPU);
     });
 
-    axios.get("../chartline/ram/" + id).then(l => {
+    axios.get("../chartline/ram/" + nameMaquina).then(l => {
         lineRAM = l.data[0].ram;
         // console.log(lineRAM);
     });
 
-    axios.get("../chartline/hd/" + id).then(l => {
+    axios.get("../chartline/hd/" + nameMaquina).then(l => {
         lineHD = l.data[0].hd;        
     });
     
-    axios.get("../chartline/gpu/" + id).then(l => {
+    axios.get("../chartline/gpu/" + nameMaquina).then(l => {
         lineGPU = l.data[0].gpu;
     });
 }
 window.onload = function () {
-    dadosDashboard();
-    dadosMaquina();
+    dadosMaquina(id_Cliente);
     speedTest();
     loopGrafico();
 };
 function loopGrafico() {
-    dadosDashboard();
+    dadosDashboard(nameMaquina);
     dadosGraficoLinha();
     gerarGrafico();
     setTimeout(() => {
         // console.log("AAAAA");
         loopGrafico();
-    }, 1000);
+    }, 000);
 }

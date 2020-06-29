@@ -33,6 +33,7 @@ function removerJogo(identifier) {
 }
 window.onload = function atualizarCatalogo() {
     jogosCatalogo();
+    // dadosCliente();
     setTimeout(() => {
         atualizarCatalogo();
         ledCores();

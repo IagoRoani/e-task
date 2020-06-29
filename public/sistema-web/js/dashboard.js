@@ -1,5 +1,4 @@
-function dadosDashboard() {
-    var id = "'DESKTOP-I3UCK4H'";
+function dadosDashboard(id) {
     axios.get("../dashboard/maquina/"+id).then(d => {
         var ultimaPosicao = d.data.length - 1;
         var dash = d.data[ultimaPosicao];
