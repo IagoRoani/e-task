@@ -1,6 +1,6 @@
 window.myCharts = [];
-var nameMaquina = localStorage.getItem("nameMaquina");
 var id_Cliente = localStorage.getItem("id_Cliente");
+var nameMaquina = localStorage.getItem("nameMaquina");
 var valueCPU,valueRAM, valueHD, valueGPU;
 var lineCPU, lineRAM, lineHD, lineGPU;
 
@@ -11,7 +11,6 @@ function gerarGrafico() {
         }
     }
     window.myCharts = [];
-    console.log(lineGPU);
 
     const cpuGrafico = new ChartDoughnut("CPU", Number(valueCPU));
     window.myCharts.push(new Chart(document.getElementById('chartCPU'),
@@ -119,5 +118,5 @@ function loopGrafico() {
     setTimeout(() => {
         // console.log("AAAAA");
         loopGrafico();
-    }, 000);
+    }, 500);
 }
